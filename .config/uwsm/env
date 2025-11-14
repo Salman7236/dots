@@ -1,0 +1,14 @@
+export XCURSOR_SIZE=24
+export EDITOR=nvim
+export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
+export QT_QPA_PLATFORMTHEME=hyprqt6engine
+export QT_QPA_PLATFORM=wayland
+export MOZ_USE_XINPUT2=1
+export MOZ_WAYLAND_USE_VAAPI=1
+export MOZ_ENABLE_WAYLAND=1
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export ANV_VIDEO_DECODE=1
+export LIBVA_DRIVER_NAME=iHD
+export VDPAU_DRIVER=va_gl
+export ANV_DEBUG=video-decode,video-encode
+#export QT_STYLE_OVERRIDE=kvantum
