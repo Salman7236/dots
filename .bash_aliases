@@ -33,10 +33,11 @@ alias vote='aur-auto-vote -n Salman7236'
 alias update-grub="sudo grub-mkconfig -o '/boot/grub/grub.cfg'"
 alias ff="fastfetch"
 alias ssh256='TERM=xterm-256color ssh'
-alias v520='ssh salman@192.168.0.100'
+alias v520='ssh salman@V520'
 alias snap='sudo timeshift --create --comments'
 alias shh='systemctl sleep'
 alias rs='rsync -chavzP --stats'
+alias reset-network='sudo systemctl restart NetworkManager && sudo systemctl restart systemd-resolved'
 ##############
 
 ### Docker ###
@@ -69,4 +70,49 @@ sudo() {
   else
     command sudo "$@"
   fi
+}
+
+### timing
+profile_bashrc() {
+  echo "=== Bashrc Profile ==="
+
+  profile() {
+    local desc="$1"
+    local cmd="$2"
+    echo -n "$desc: "
+    { time eval "$cmd"; } 2>&1 | grep real
+  }
+
+  # 1. Aliases & PS1
+  profile "Aliases & PS1" "alias ls='ls --color=auto'; alias grep='grep --color=auto'; PS1='[\u@\h \W]\$ '"
+
+  # 2. Sourcing bash_aliases
+  profile "Sourcing ~/.bash_aliases" "[ -f \$HOME/.bash_aliases ] && . \$HOME/.bash_aliases"
+
+  # 3. fastfetch
+  profile "fastfetch" "fastfetch"
+
+  # 4. git rev-parse (simulate not in repo)
+  profile "git rev-parse" "git rev-parse --show-toplevel 2>/dev/null || true"
+
+  # 5. onefetch (simulate not in repo)
+  profile "onefetch" "onefetch 2>/dev/null || true"
+
+  # 6. zoxide
+  profile "zoxide init" "eval \"\$(zoxide init bash)\""
+
+  # 7. fzf
+  profile "fzf init" "eval \"\$(fzf --bash)\""
+
+  # 8. PATH export
+  profile "PATH export" "export PATH=\$HOME/.local/bin:\$PATH"
+
+  # 9. fnm
+  profile "fnm init" "eval \"\$(fnm env --use-on-cd --shell bash)\""
+
+  # 10. yazi helper (without opening full UI)
+  tmpfile=$(mktemp)
+  profile "yazi helper" "yazi --cwd-file='$tmpfile' --non-interactive >/dev/null 2>&1; rm -f '$tmpfile'"
+
+  echo "=== Done ==="
 }
