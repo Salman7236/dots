@@ -39,7 +39,7 @@ cd() {
 
 # optional, greet also when opening shell directly in repository directory
 # adds time to startup
-check_directory_for_new_repository
+#check_directory_for_new_repository
 ###############
 
 # Zoxide
@@ -57,4 +57,8 @@ function y() {
   rm -f -- "$tmp"
 }
 
-. /usr/share/nvm/init-nvm.sh
+#path for bin
+export PATH="$HOME/.local/bin:$PATH"
+
+# fnm
+eval "$(fnm env --use-on-cd --shell bash)"
