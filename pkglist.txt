@@ -36,7 +36,6 @@ fastfetch
 fd
 ffmpegthumbnailer
 fnm-bin
-fnm-bin-debug
 frameworkintegration
 ghostmirror
 git
@@ -134,6 +133,8 @@ shiny-mirrors
 sl
 slurp
 sof-firmware
+speedtest++
+speedtest++-debug
 spotify-launcher
 stress-ng
 tailscale
