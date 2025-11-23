@@ -86,11 +86,13 @@ mediainfo
 mediainfo-gui
 mirro-rs
 mpv
+ncspot
 neo-matrix
 neovide
 neovim
 network-manager-applet
 networkmanager
+ngrep
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -134,8 +136,8 @@ sl
 slurp
 sof-firmware
 speedtest++
-speedtest++-debug
 spotify-launcher
+sshfs
 stress-ng
 tailscale
 terminus-font
