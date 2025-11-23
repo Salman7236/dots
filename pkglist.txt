@@ -82,6 +82,7 @@ lua51
 luarocks
 man-db
 man-pages
+markdownlint-cli2
 mediainfo
 mediainfo-gui
 mirro-rs
