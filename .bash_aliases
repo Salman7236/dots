@@ -53,7 +53,7 @@ alias docker-down='sudo docker-compose -f ~/.config/docker/docker-compose.yml do
 alias c='clear && fastfetch' # quick clear + fetch
 alias ..='cd ..'
 alias ...='cd ../..'
-alias -- -='cd -' # return to last dir
+# alias -='cd -' # return to last dir
 
 ### Functions ###
 
