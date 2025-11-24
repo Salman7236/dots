@@ -152,6 +152,7 @@ thunar-vcs-plugin
 thunar-volman
 tig
 timeshift
+timeshift-autosnap
 timeshift-systemd-timer
 toilet
 topgrade-bin
