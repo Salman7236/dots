@@ -94,6 +94,7 @@ neovim
 network-manager-applet
 networkmanager
 ngrep
+nicotine+
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
