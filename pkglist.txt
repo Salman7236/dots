@@ -18,9 +18,11 @@ btop
 btrfs-desktop-notification
 btrfs-progs
 chezmoi
+clamav
 cliphist
 cowsay
 cpio
+curtail
 darkly-bin
 dkms
 docker
