@@ -33,11 +33,13 @@ alias vote='aur-auto-vote -n Salman7236'
 alias update-grub="sudo grub-mkconfig -o '/boot/grub/grub.cfg'"
 alias ff="fastfetch"
 alias ssh256='TERM=xterm-256color ssh'
-alias v520='ssh salman@V520'
+alias v520='ssh salman@v520.local'
+alias s='kitten ssh salman@v520.local'
 alias snap='sudo timeshift --create --comments'
 alias shh='systemctl sleep'
 alias rs='rsync -chavzP --stats'
 alias reset-network='sudo systemctl restart NetworkManager && sudo systemctl restart systemd-resolved'
+alias e='exit'
 ##############
 
 ### Docker ###
