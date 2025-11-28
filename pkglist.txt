@@ -4,6 +4,7 @@ adobe-source-sans-fonts
 android-tools
 android-udev
 app2unit-git
+archlinux-xdg-menu
 aur-auto-vote-git
 auto-cpufreq
 base
@@ -17,7 +18,6 @@ brightnessctl
 btop
 btrfs-desktop-notification
 btrfs-progs
-chezmoi
 clamav
 cliphist
 cowsay
@@ -27,6 +27,7 @@ darkly-bin
 dkms
 docker
 docker-compose
+dolphin
 dosfstools
 downgrade
 dunst
@@ -36,7 +37,7 @@ efibootmgr
 expac
 fastfetch
 fd
-ffmpegthumbnailer
+ffmpegthumbs
 fnm-bin
 frameworkintegration
 ghostmirror
@@ -64,6 +65,7 @@ imv
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+kio-admin
 kitty
 kvantum
 kvantum-qt5
@@ -131,11 +133,13 @@ qt6ct
 rate-mirrors-bin
 rebuild-detector
 reflector
+resvg
 ripgrep
 rose-pine-hyprcursor
 s-tui
 sddm
 shiny-mirrors
+simple-mtpfs
 sl
 slurp
 sof-firmware
@@ -176,8 +180,6 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-meslo-nerd
 ttf-opensans
-tumbler
-udiskie
 uwsm
 ventoy-bin
 visual-studio-code-bin
