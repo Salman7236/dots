@@ -35,6 +35,7 @@ dysk
 easyeffects
 efibootmgr
 expac
+eza
 fastfetch
 fd
 ffmpegthumbs
@@ -151,18 +152,13 @@ tailscale
 terminus-font
 texinfo
 thermald
-thunar
-thunar-archive-plugin
-thunar-media-tags-plugin
-thunar-shares-plugin
-thunar-vcs-plugin
-thunar-volman
 tig
 timeshift
 timeshift-autosnap
 timeshift-systemd-timer
 toilet
 topgrade-bin
+tree
 tree-sitter-bash
 tree-sitter-cli
 tree-sitter-javascript
