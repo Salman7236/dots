@@ -40,6 +40,8 @@ alias shh='systemctl sleep'
 alias rs='rsync -chavzP --stats'
 alias reset-network='sudo systemctl restart NetworkManager && sudo systemctl restart systemd-resolved'
 alias e='exit'
+alias tl='sudo timeshift --list'
+alias cpu='auto-cpufreq --stats'
 ##############
 
 ### Docker ###
