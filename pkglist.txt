@@ -96,6 +96,7 @@ ncspot
 neo-matrix
 neovide
 neovim
+net-tools
 network-manager-applet
 networkmanager
 ngrep
