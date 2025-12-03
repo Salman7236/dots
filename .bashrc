@@ -30,7 +30,9 @@ fi
 ############################
 
 # auto exec
-fastfetch
+if [ -f /usr/bin/fastfetch ]; then
+  fastfetch
+fi
 
 ### Onefetch ###
 # git repository greeter
