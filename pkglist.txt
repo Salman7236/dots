@@ -139,6 +139,7 @@ ripgrep
 rose-pine-hyprcursor
 s-tui
 sddm
+shellcheck
 shiny-mirrors
 simple-mtpfs
 sl
