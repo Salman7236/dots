@@ -11,8 +11,8 @@ PS1='[\u@\h \W]\$ '
 # Colorized prompt with user@host and directory
 #export PS1="\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ "
 
-if [ -f $HOME/.bash_aliases ]; then
-  . $HOME/.bash_aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+  . "$HOME/.bash_aliases"
 fi
 
 ############################
@@ -33,7 +33,7 @@ check_directory_for_new_repository() {
   last_repository=$current_repository
 }
 cd() {
-  builtin cd "$@"
+  builtin cd "$@" || return
   check_directory_for_new_repository
 }
 
@@ -50,10 +50,11 @@ eval "$(fzf --bash)"
 
 # yazi change cwd when exiting
 function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  local tmp cwd
+  tmp="$(mktemp -t "yazi-cwd.XXXXXX")" || return
   yazi "$@" --cwd-file="$tmp"
   IFS= read -r -d '' cwd <"$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd" || return
   rm -f -- "$tmp"
 }
 
@@ -62,3 +63,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # fnm
 eval "$(fnm env --use-on-cd --shell bash)"
+
+# Auto "cd" when entering just a path
+shopt -s autocd
