@@ -8,6 +8,7 @@ alias yeet='yay -Rns'
 
 ### configs ###
 alias aliases='nvim ~/.bash_aliases'
+alias rc='nvim ~/.bashrc'
 alias hc='nvim ~/.config/hypr/hyprland.conf'
 alias kc='nvim ~/.config/kitty/kitty.conf'
 alias ilua='nvim ~/.config/nvim/init.lua'
@@ -42,6 +43,7 @@ alias reset-network='sudo systemctl restart NetworkManager && sudo systemctl res
 alias e='exit'
 alias tl='sudo timeshift --list'
 alias cpu='auto-cpufreq --stats'
+alias cp='cp -i'
 ##############
 
 ### Docker ###
