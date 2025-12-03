@@ -123,7 +123,6 @@ pipewire-jack
 pipewire-pulse
 plymouth
 plymouth-theme-neat
-proton-vpn-gtk-app
 pwvucontrol
 python-pywal16
 qbittorrent
@@ -186,6 +185,7 @@ vulkan-icd-loader
 vulkan-intel
 vulkan-tools
 waybar
+wev
 which
 wireplumber
 wl-clip-persist
