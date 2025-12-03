@@ -7,9 +7,21 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
 # Colorized prompt with user@host and directory
-#export PS1="\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ "
+# PS1="\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ "
+# PS1='\[\e[96m\]\w\[\e[0m\] \[\e[38;5;208m\]λ \[\e[0m\]'
+# PS1='\[\e[38;5;141m\]\u@\h\[\e[0m\] \[\e[96m\]\w\[\e[0m\]\n\[\e[38;5;208m\]➜ \[\e[0m\]'
+
+# git_branch() { git branch 2>/dev/null | sed -n '/^\*/s/^\* //p'; }
+# PS1='\[\e[38;5;81m\]\w\[\e[0m\]$(gb="\[\e[38;5;208m\]$(git_branch)\[\e[0m\]"; [[ $gb ]] && echo " $gb") \[\e[38;5;208m\]❯\[\e[0m\] '
+
+# Parse git branch
+parse_git_branch() {
+  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1='\[\e[36m\]\u\[\e[0m\]@\[\e[35m\]\h\[\e[0m\] \[\e[33m\]\w\[\e[0m\] \[\e[32m\]$(parse_git_branch)\[\e[0m\]\$ '
 
 if [ -f "$HOME/.bash_aliases" ]; then
   . "$HOME/.bash_aliases"
