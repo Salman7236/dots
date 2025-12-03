@@ -50,10 +50,10 @@ PROMPT_COMMAND='history -a'
 
 # Ignore case on auto-completion
 # Note: bind used instead of sticking these in .inputrc
-if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi
-
+# Ignore case on auto-completion
+bind "set completion-ignore-case on"
 # Show auto-completion list automatically, without double tab
-if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
+bind "set show-all-if-ambiguous On"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

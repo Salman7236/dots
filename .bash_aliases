@@ -45,6 +45,9 @@ alias e='exit'
 alias tl='sudo timeshift --list'
 alias cpu='auto-cpufreq --stats'
 alias cp='cp -i'
+alias mv='mv -i'
+alias less='less -R'
+alias h="history | grep "
 ##############
 
 ### Docker ###
@@ -58,8 +61,11 @@ alias docker-down='sudo docker-compose -f ~/.config/docker/docker-compose.yml do
 
 ###################
 alias c='clear && fastfetch' # quick clear + fetch
+alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 # alias -='cd -' # return to last dir
 
 # eza ls aliases
