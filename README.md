@@ -1,3 +1,5 @@
+(don't use these, they broken, unless you into that kinda stuff)
+
 # Dotfiles
 
 Managed using the [bare git repo](https://www.atlassian.com/git/tutorials/dotfiles) method. Popularized by this [Hacker News thread.](https://news.ycombinator.com/item?id=11071754)
