@@ -51,7 +51,7 @@ PROMPT_COMMAND='history -a'
 # Ignore case on auto-completion
 bind "set completion-ignore-case on"
 # Show auto-completion list automatically, without double tab
-bind "set show-all-if-ambiguous On"
+# bind "set show-all-if-ambiguous On"
 
 ### Onefetch ###
 # git repository greeter

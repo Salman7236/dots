@@ -18,6 +18,10 @@ alias mpvconf='v ~/.config/mpv/mpv.conf'
 
 # dotfiles git workflow #
 alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
+# alias nun='dots commit -m "nun too much"'
+nun() {
+  dots commit -m "nun too much"
+}
 ###############
 
 ### others ###
