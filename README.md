@@ -27,4 +27,4 @@ Managed using the [bare git repo](https://www.atlassian.com/git/tutorials/dotfil
     ```
 
 > [!TIP]
-> [`sudoedit`](https://wiki.archlinux.org/title/Sudo#Editing_files) uses the editor set by the `SUDO_EDITOR` [environment variable](https://wiki.archlinux.org/title/Environment_variables) to edit files owned by root as the current user. (Running something like `sudo nvim` opens Neovim without all of the user configuration. That's why your plugins and themes might be missing when you open neovim as root.)
+> [`sudoedit`](https://wiki.archlinux.org/title/Sudo#Editing_files) uses the editor set by the `SUDO_EDITOR` [environment variable](https://wiki.archlinux.org/title/Environment_variables) to edit files owned by root as the current user. Running something like `sudo nvim` opens Neovim without all of the user configuration. That's why your plugins and themes might be missing when you open neovim as root.
