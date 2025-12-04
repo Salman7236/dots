@@ -21,6 +21,7 @@ alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
 ###############
 
 ### others ###
+# alias grep='grep --color=auto'
 alias grep='rg'
 alias fr='sudo $(history -p !!)'
 alias :q="echo 'You ain'\''t editing a file, nigga.'"
@@ -48,6 +49,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias less='less -R'
 alias h="history | grep "
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 ##############
 
 ### Docker ###

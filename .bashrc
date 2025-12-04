@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-# alias grep='grep --color=auto'
 # PS1='[\u@\h \W]\$ '
 # Colorized prompt with user@host and directory
 # PS1="\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ "
@@ -54,10 +52,6 @@ PROMPT_COMMAND='history -a'
 bind "set completion-ignore-case on"
 # Show auto-completion list automatically, without double tab
 bind "set show-all-if-ambiguous On"
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 ### Onefetch ###
 # git repository greeter
