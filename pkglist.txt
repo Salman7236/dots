@@ -67,6 +67,8 @@ intel-gpu-tools
 intel-media-driver
 intel-ucode
 kio-admin
+kio-fuse
+kio5-extras
 kitty
 kvantum
 kvantum-qt5
@@ -126,6 +128,7 @@ plymouth-theme-neat
 pwvucontrol
 python-pywal16
 qbittorrent
+qt5-imageformats
 qt5-wayland
 qt5ct
 qt6-multimedia-ffmpeg
