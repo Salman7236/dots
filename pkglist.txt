@@ -5,7 +5,7 @@ android-tools
 android-udev
 app2unit-git
 archlinux-xdg-menu
-aur-auto-vote-git
+aur-sync-vote
 auto-cpufreq
 base
 base-devel
