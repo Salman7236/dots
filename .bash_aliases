@@ -41,9 +41,8 @@ alias vote='aur-auto-vote -n Salman7236'
 #alias v='nvim'
 alias update-grub="sudo grub-mkconfig -o '/boot/grub/grub.cfg'"
 alias ff="fastfetch"
-alias ssh256='TERM=xterm-256color ssh'
-alias v520='ssh salman@v520.local'
-alias s='kitten ssh salman@v520.local'
+alias v520='ssh salman@v520'
+alias s='kitten ssh salman@v520'
 # alias snap='sudo timeshift --create --comments'
 alias shh='systemctl sleep'
 alias rs='rsync -chavzP --stats'
@@ -64,6 +63,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias docker-update='sudo docker-compose -f ~/.config/docker/docker-compose.yml pull'
 alias docker-up='sudo docker-compose -f ~/.config/docker/docker-compose.yml up -d'
 alias docker-down='sudo docker-compose -f ~/.config/docker/docker-compose.yml down'
+alias dl='sudo docker-compose -f ~/.config/docker/docker-compose.yml logs'
+alias ctop='sudo ctop'
+alias lazydocker='sudo lazydocker'
+alias dexec='sudo docker-compose -f ~/.config/docker/docker-compose.yml exec'
 ###################
 
 ### Directories ###
