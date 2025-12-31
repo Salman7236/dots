@@ -1,0 +1,46 @@
+# Halloy config.
+#
+# For a complete list of available options,
+# please visit https://halloy.chat/configuration/
+
+[servers.Seedpool]
+nickname = "Salman7236"
+server = "irc.seedpool.org"
+channels = ["#seedpool", "#announce"]
+port = 6697
+# passkey = f3387bca5097c804e6f0a14cbc847d6e
+
+
+# [servers.liberachat]
+# nickname = "Salman7236"
+# server = "irc.libera.chat"
+# channels = ["#halloy"]
+#
+#
+# [servers.blutopia]
+# nickname = "Salman7236"
+# nick_password = "647224"
+# server = "irc.p2p-network.net"
+# channels = ["#blutopia"]
+# port = 6697
+#
+# [servers.FearNoPear]
+# nickname = "Salman7236_1"
+# nick_password = "647224"
+# server = "irc.p2p-network.net"
+# channels = ["#FNP", "#fearnopeer-announce"]
+# port = 6697
+#
+# [servers.HDBits]
+# nickname = "Salman7236"
+# nick_password = "647224"
+# server = "irc.p2p-network.net"
+# channels = ["#HDbits"]
+# port = 6697
+#
+# [servers.CinemaZ]
+# nickname = "Salman7236"
+# nick_password = "647224"
+# channels = ["#cinemaz"]
+# port = 6697
+# server = "irc.rizon.net"
