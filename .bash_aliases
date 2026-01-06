@@ -21,6 +21,7 @@ alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
 # alias nun='dots commit -m "nun too much"'
 nun() {
   dots commit -m "nun too much"
+  dots push
 }
 alias pkglist='dots add pkglist.txt && dots commit -m "pkglist" && dots push' # alias to add, commit and push pkglist.txt
 ###############
@@ -57,7 +58,7 @@ alias h="history | grep "
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias rm='rm -Iv'
+alias rm=''
 ##############
 
 ### Docker ###
