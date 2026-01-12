@@ -61,13 +61,15 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 ##############
 
 ### Docker ###
-alias docker-update='sudo docker-compose -f ~/.config/docker/docker-compose.yml pull'
-alias docker-up='sudo docker-compose -f ~/.config/docker/docker-compose.yml up -d'
-alias docker-down='sudo docker-compose -f ~/.config/docker/docker-compose.yml down'
-alias dl='sudo docker-compose -f ~/.config/docker/docker-compose.yml logs'
+alias docker-pull='sudo docker compose -f ~/.config/docker/docker-compose.yml pull'
+alias docker-up='sudo docker compose -f ~/.config/docker/docker-compose.yml up -d'
+alias docker-down='sudo docker compose -f ~/.config/docker/docker-compose.yml down'
+alias docker-restart='sudo docker compose -f ~/.config/docker/docker-compose.yml restart'
+alias docker-update='sudo docker compose -f ~/.config/docker/docker-compose.yml pull && sudo docker compose -f ~/.config/docker/docker-compose.yml up -d'
+alias dl='sudo docker compose -f ~/.config/docker/docker-compose.yml logs'
 alias ctop='sudo ctop'
 alias lazydocker='sudo lazydocker'
-alias dexec='sudo docker-compose -f ~/.config/docker/docker-compose.yml exec'
+alias dexec='sudo docker compose -f ~/.config/docker/docker-compose.yml exec'
 ###################
 
 ### Directories ###
