@@ -50,6 +50,7 @@ ghostmirror
 ghostty-shell-integration
 ghostty-terminfo
 git
+git-filter-repo
 gitu
 gnu-free-fonts
 gptfdisk
