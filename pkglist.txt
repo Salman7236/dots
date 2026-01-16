@@ -23,6 +23,8 @@ btrfs-desktop-notification
 btrfs-progs
 clamav
 cliphist
+cloudflare-warp-bin
+cloudflare-warp-bin-debug
 cowsay
 cpio
 ctop
