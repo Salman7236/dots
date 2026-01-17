@@ -103,6 +103,7 @@ mediainfo
 mediainfo-gui
 mirro-rs
 mpv
+nautilus
 nchat
 ncspot
 neo-matrix
@@ -124,6 +125,7 @@ nyancat
 onefetch
 openssh
 os-prober
+otf-commit-mono-nerd
 otf-font-awesome
 otf-libertinus
 pacman-contrib
