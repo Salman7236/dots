@@ -101,9 +101,7 @@ man-pages
 markdownlint-cli2
 mediainfo
 mediainfo-gui
-mirro-rs
 mpv
-nautilus
 nchat
 ncspot
 neo-matrix
@@ -144,7 +142,6 @@ qt5ct-kde
 qt6-multimedia-ffmpeg
 qt6-virtualkeyboard
 qt6ct-kde
-rate-mirrors-bin
 rebuild-detector
 reflector
 resvg
