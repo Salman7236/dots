@@ -29,6 +29,7 @@ cpio
 ctop
 darkly-bin
 dkms
+dnsmasq
 docker
 docker-compose
 dolphin
@@ -37,6 +38,7 @@ downgrade
 dunst
 dysk
 easyeffects
+edk2-ovmf
 efibootmgr
 exfatprogs
 expac
@@ -62,6 +64,7 @@ grub-btrfs
 gst-plugin-pipewire
 gst-plugin-va
 gtk4-layer-shell
+guestfs-tools
 gvfs
 gvfs-mtp
 gvfs-smb
@@ -88,6 +91,7 @@ lib32-vulkan-intel
 libinput-tools
 libpulse
 libva-utils
+libvirt
 linux
 linux-firmware
 linux-headers
@@ -136,6 +140,8 @@ plymouth
 plymouth-theme-neat
 pwvucontrol
 python-pywal16
+qemu-full
+qemu-img
 qt5-imageformats
 qt5-wayland
 qt5ct-kde
@@ -161,6 +167,7 @@ spotify-launcher
 ssh-audit
 sshfs
 stress-ng
+swtpm
 tailscale
 terminus-font
 texinfo
@@ -194,6 +201,9 @@ unrar
 usbutils
 uwsm
 ventoy-bin
+virt-install
+virt-manager
+virt-viewer
 visual-studio-code-bin
 viu
 vpl-gpu-rt
