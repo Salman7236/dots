@@ -99,3 +99,4 @@ eval "$(fnm env --use-on-cd --shell bash)"
 
 # Auto "cd" when entering just a path
 shopt -s autocd
+export LIBVIRT_DEFAULT_URI="qemu:///system"
