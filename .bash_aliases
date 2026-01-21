@@ -59,6 +59,9 @@ alias h="history | grep "
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias rsl='sudo resolvectl status'
 alias warp-reset='warp-cli disconnect && sudo systemctl restart warp-svc.service && sleep 3 && warp-cli connect'
+alias warp-d='warp-cli disconnect'
+alias warp-c='warp-cli connect'
+alias warp-s='warp-cli status'
 ##############
 
 ### Docker ###
