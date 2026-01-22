@@ -22,6 +22,7 @@ btrfs-assistant
 btrfs-desktop-notification
 btrfs-progs
 clamav
+cli11
 cliphist
 cloudflare-warp-bin
 cowsay
@@ -57,6 +58,7 @@ git
 git-filter-repo
 gitu
 gnu-free-fonts
+google-breakpad
 gptfdisk
 grim
 grimblast-git
@@ -84,6 +86,7 @@ kio-fuse
 kio5-extras
 kitty
 kwallet-pam
+kwalletmanager
 lazygit
 ldns
 less
@@ -137,6 +140,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+pkgfile
 plasma-integration
 plymouth
 plymouth-theme-neat
@@ -227,6 +231,7 @@ xf86-input-synaptics
 xorg-xhost
 yay
 yazi
+yt-dlp-ejs
 zen-browser-bin
 zoxide
 zram-generator
