@@ -64,6 +64,7 @@ grim
 grimblast-git
 grub
 grub-btrfs
+gsmartcontrol
 gst-plugin-pipewire
 gst-plugin-va
 gtk4-layer-shell
@@ -71,6 +72,8 @@ guestfs-tools
 gvfs
 gvfs-mtp
 gvfs-smb
+hub-rand
+hypremoji
 hypridle
 hyprland
 hyprlock
@@ -162,6 +165,7 @@ rose-pine-hyprcursor
 s-nail
 s-tui
 sddm
+sex
 shellcheck
 shiny-mirrors
 simple-mtpfs
@@ -204,6 +208,7 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-meslo-nerd
 ttf-opensans
+ttyper
 unarchiver
 unrar
 usbutils
