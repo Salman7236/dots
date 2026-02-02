@@ -84,6 +84,7 @@ imv
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+isd
 kio-admin
 kio-fuse
 kio5-extras
