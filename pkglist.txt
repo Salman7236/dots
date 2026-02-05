@@ -5,6 +5,7 @@ android-tools
 android-udev
 app2unit-git
 archlinux-xdg-menu
+aria2
 ark
 aur-sync-vote
 auto-cpufreq
@@ -84,7 +85,9 @@ imv
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+iperf3
 isd
+kdenlive
 kio-admin
 kio-fuse
 kio5-extras
@@ -105,6 +108,7 @@ linux-firmware
 linux-headers
 lolcat
 lsb-release
+lshw
 lsp-plugins
 lua51
 luarocks
@@ -226,6 +230,7 @@ vulkan-intel
 vulkan-tools
 waybar
 wev
+wget
 which
 wireplumber
 wl-clip-persist
