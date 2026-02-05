@@ -1,5 +1,4 @@
 UNIT FILE                         STATE   PRESET
-mnt-pool.automount                enabled disabled
 acpid.service                     enabled disabled
 auto-cpufreq.service              enabled disabled
 avahi-daemon.service              enabled disabled
@@ -55,4 +54,4 @@ paccache.timer                    enabled disabled
 pacman-filesdb-refresh.timer      enabled disabled
 timeshift-hourly.timer            enabled disabled
 
-55 unit files listed.
+54 unit files listed.
