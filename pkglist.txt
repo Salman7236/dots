@@ -52,6 +52,8 @@ ffmpegthumbs
 fnm-bin
 fprintd
 frameworkintegration
+freedownloadmanager
+freedownloadmanager-debug
 ghostmirror
 ghostty-shell-integration
 ghostty-terminfo
