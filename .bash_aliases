@@ -78,7 +78,7 @@ alias sysinfo='sudo sysinfo'
 ###################
 
 ###################
-alias c='clear && fastfetch' # quick clear + fetch
+alias c='clear' # quick clear + fetch
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -123,6 +123,6 @@ snap() {
   sudo timeshift --create --comments "${today}${comment:+_${comment}}"
 }
 
-miclip () {
+miclip() {
   mediainfo "$@" | kitten clipboard
 }
