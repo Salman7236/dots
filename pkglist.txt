@@ -107,6 +107,7 @@ libvirt
 linux
 linux-firmware
 linux-headers
+localsend-bin
 lolcat
 lsb-release
 lshw
@@ -245,6 +246,7 @@ yay
 yazi
 yt-dlp-ejs
 zen-browser-bin
+zen-twilight-bin
 zoxide
 zram-generator
 zsh
