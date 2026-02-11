@@ -16,6 +16,7 @@ bat
 bind
 bluez
 bluez-utils
+brave-bin
 brightnessctl
 btop
 btrbk
