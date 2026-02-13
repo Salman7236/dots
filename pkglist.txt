@@ -50,6 +50,7 @@ eza
 fastfetch
 fd
 ffmpegthumbs
+filelight
 fnm-bin
 fprintd
 frameworkintegration
@@ -89,6 +90,7 @@ intel-media-driver
 intel-ucode
 iperf3
 isd
+iw
 kdenlive
 kio-admin
 kio-fuse
@@ -155,7 +157,9 @@ pkgfile
 plasma-integration
 plymouth
 plymouth-theme-neat
+pv
 pwvucontrol
+python-mutagen
 python-pywal16
 qemu-full
 qemu-img
@@ -247,7 +251,6 @@ yay
 yazi
 yt-dlp-ejs
 zen-browser-bin
-zen-twilight-bin
 zoxide
 zram-generator
 zsh
