@@ -42,7 +42,7 @@ alias ff="fastfetch"
 alias v520='ssh salman@v520'
 alias s='kitten ssh salman@v520'
 alias shh='systemctl sleep'
-alias rs='rsync -havP --stats'
+alias rs='rsync -havP --info=progress2,stats2'
 alias reset-network='sudo systemctl restart NetworkManager.service systemd-resolved.service'
 alias e='exit'
 alias tl='sudo timeshift --list'
