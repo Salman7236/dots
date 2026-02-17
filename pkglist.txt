@@ -157,6 +157,7 @@ pkgfile
 plasma-integration
 plymouth
 plymouth-theme-neat
+progress
 pv
 pwvucontrol
 python-mutagen
