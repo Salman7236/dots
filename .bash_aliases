@@ -78,7 +78,7 @@ alias sysinfo='sudo sysinfo'
 ###################
 
 ###################
-alias c='clear' # quick clear + fetch
+alias c='clear && fastfetch' # quick clear + fetch
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
