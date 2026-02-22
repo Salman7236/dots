@@ -51,7 +51,7 @@ fastfetch
 fd
 ffmpegthumbs
 filelight
-fnm-bin
+fnm
 fprintd
 frameworkintegration
 freedownloadmanager
@@ -123,7 +123,6 @@ markdownlint-cli2
 mediainfo
 mediainfo-gui
 mpv
-nchat
 ncspot
 neo-matrix
 neovide
