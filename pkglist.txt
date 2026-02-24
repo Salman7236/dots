@@ -73,6 +73,7 @@ gst-plugin-pipewire
 gst-plugin-va
 gtk4-layer-shell
 guestfs-tools
+gum
 gvfs
 gvfs-mtp
 gvfs-smb
