@@ -86,6 +86,7 @@ hyprpaper
 hyprpicker
 hyprpolkitagent
 imv
+inetutils
 intel-gpu-tools
 intel-media-driver
 intel-ucode
