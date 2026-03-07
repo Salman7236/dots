@@ -80,6 +80,8 @@ gvfs-smb
 hub-rand
 hypremoji
 hypridle
+hyprkcs-git
+hyprkcs-git-debug
 hyprland
 hyprlock
 hyprpaper
