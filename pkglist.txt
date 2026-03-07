@@ -39,7 +39,9 @@ docker-compose
 dolphin
 dosfstools
 downgrade
+dua-cli
 dunst
+dust
 dysk
 easyeffects
 edk2-ovmf
@@ -55,6 +57,7 @@ fnm
 fprintd
 frameworkintegration
 freedownloadmanager
+gdu
 ghostmirror
 ghostty-shell-integration
 ghostty-terminfo
@@ -81,7 +84,6 @@ hub-rand
 hypremoji
 hypridle
 hyprkcs-git
-hyprkcs-git-debug
 hyprland
 hyprlock
 hyprpaper
@@ -127,6 +129,7 @@ markdownlint-cli2
 mediainfo
 mediainfo-gui
 mpv
+ncdu
 ncspot
 neo-matrix
 neovide
