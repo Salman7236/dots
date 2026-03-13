@@ -59,8 +59,6 @@ frameworkintegration
 freedownloadmanager
 gdu
 ghostmirror
-ghostty-shell-integration
-ghostty-terminfo
 git
 git-filter-repo
 gitu
@@ -83,7 +81,6 @@ gvfs-smb
 hub-rand
 hypremoji
 hypridle
-hyprkcs-git
 hyprland
 hyprlock
 hyprpaper
