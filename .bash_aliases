@@ -127,6 +127,6 @@ snap() {
   sudo timeshift --create --comments "${today}${comment:+_${comment}}"
 }
 
-miclip() {
+mi() {
   mediainfo "$@" | kitten clipboard
 }
