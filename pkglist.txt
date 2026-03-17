@@ -174,7 +174,8 @@ qt6-multimedia-ffmpeg
 qt6-virtualkeyboard
 qt6ct-kde
 rebuild-detector
-reflector
+reflector-rs-bin
+reflector-rs-bin-debug
 resvg
 ripgrep
 rose-pine-hyprcursor
