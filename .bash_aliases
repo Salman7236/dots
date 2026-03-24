@@ -59,6 +59,7 @@ alias warp-r='warp-cli disconnect && sudo systemctl restart warp-svc.service && 
 alias warp-d='warp-cli disconnect'
 alias warp-c='warp-cli connect'
 alias warp-s='warp-cli status'
+alias media='yazi /mnt/sshfs/pool/'
 ##############
 
 ### Docker ###
