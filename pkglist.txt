@@ -256,6 +256,7 @@ xorg-xhost
 yay
 yazi
 yt-dlp-ejs
+zathura
 zen-browser-bin
 zoxide
 zram-generator
