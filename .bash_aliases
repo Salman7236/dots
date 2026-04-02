@@ -40,7 +40,13 @@ alias vote='aur-auto-vote -n Salman7236'
 alias update-grub="sudo grub-mkconfig -o '/boot/grub/grub.cfg'"
 alias ff="fastfetch"
 alias v520='ssh salman@v520'
-alias s='kitten ssh salman@v520'
+
+s() {
+  kitty @ set-colors --all "/home/salman/.config/kitty/Tomorrow Night Bright.conf"
+  kitten ssh salman@v520
+  kitty @ set-colors --all /home/salman/.config/kitty/current-theme.conf
+}
+
 alias shh='systemctl sleep'
 alias rs='rsync -havP --info=progress2,stats2'
 alias reset-network='sudo systemctl restart NetworkManager.service systemd-resolved.service'
