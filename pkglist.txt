@@ -16,6 +16,7 @@ bat
 bind
 bluez
 bluez-utils
+brave-bin
 brightnessctl
 btop
 btrbk
@@ -38,6 +39,7 @@ docker-compose
 dolphin
 dosfstools
 downgrade
+drm-info
 dua-cli
 dunst
 dust
@@ -92,7 +94,9 @@ intel-ucode
 iperf3
 isd
 iw
+kdegraphics-thumbnailers
 kdenlive
+kimageformats
 kio-admin
 kio-fuse
 kio5-extras
@@ -124,6 +128,7 @@ man-pages
 markdownlint-cli2
 mediainfo
 mediainfo-gui
+mesa-utils
 mpv
 mtr
 ncdu
@@ -136,6 +141,7 @@ network-manager-applet
 networkmanager
 ngrep
 nicotine+
+nmap
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
