@@ -170,6 +170,7 @@ progress
 pv
 pwvucontrol
 python-mutagen
+python-pip
 python-pywal16
 qemu-full
 qemu-img
