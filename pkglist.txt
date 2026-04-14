@@ -9,6 +9,7 @@ aria2
 ark
 aur-sync-vote
 auto-cpufreq
+awww
 base
 base-devel
 bash-completion
@@ -16,7 +17,7 @@ bat
 bind
 bluez
 bluez-utils
-brave-bin
+breeze-gtk
 brightnessctl
 btop
 btrbk
@@ -99,7 +100,6 @@ kdenlive
 kimageformats
 kio-admin
 kio-fuse
-kio5-extras
 kitty
 kwallet-pam
 kwalletmanager
@@ -126,6 +126,7 @@ luarocks
 man-db
 man-pages
 markdownlint-cli2
+matugen
 mediainfo
 mediainfo-gui
 mesa-utils
@@ -134,7 +135,6 @@ mtr
 ncdu
 ncspot
 neo-matrix
-neovide
 neovim
 net-tools
 network-manager-applet
@@ -152,12 +152,14 @@ nwg-displays
 nwg-look
 nyancat
 onefetch
+opencode
 openssh
 os-prober
 otf-commit-mono-nerd
 otf-font-awesome
 otf-libertinus
 pacman-contrib
+parsync-bin
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -172,6 +174,7 @@ pwvucontrol
 python-mutagen
 python-pip
 python-pywal16
+python-pywalfox
 qemu-full
 qemu-img
 qt5-imageformats
