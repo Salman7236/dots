@@ -47,6 +47,12 @@ s() {
   kitty @ set-colors --all /home/salman/.config/kitty/current-theme.conf
 }
 
+ks() {
+  kitty @ set-colors --all "/home/salman/.config/kitty/Tomorrow Night Bright.conf"
+  kitten ssh salman@100.111.9.74
+  kitty @ set-colors --all /home/salman/.config/kitty/current-theme.conf
+}
+
 alias shh='systemctl sleep'
 alias rs='rsync -havP --info=progress2,stats2'
 alias reset-network='sudo systemctl restart NetworkManager.service systemd-resolved.service'
