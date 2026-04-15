@@ -24,6 +24,10 @@ btrbk
 btrfs-assistant
 btrfs-desktop-notification
 btrfs-progs
+cachyos-keyring
+cachyos-mirrorlist
+cachyos-v3-mirrorlist
+cachyos-v4-mirrorlist
 clamav
 cli11
 cliphist
@@ -114,6 +118,8 @@ libtorrent
 libva-utils
 libvirt
 linux
+linux-cachyos
+linux-cachyos-headers
 linux-firmware
 linux-headers
 localsend-bin
