@@ -100,7 +100,6 @@ iperf3
 isd
 iw
 kdegraphics-thumbnailers
-kdenlive
 kimageformats
 kio-admin
 kio-fuse
