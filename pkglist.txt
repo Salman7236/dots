@@ -28,6 +28,7 @@ cachyos-keyring
 cachyos-mirrorlist
 cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
+chafa
 clamav
 cli11
 cliphist
