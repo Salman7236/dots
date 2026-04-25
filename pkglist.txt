@@ -84,7 +84,6 @@ gum
 gvfs
 gvfs-mtp
 gvfs-smb
-hub-rand
 hypremoji
 hypridle
 hyprland
@@ -222,7 +221,7 @@ timeshift
 timeshift-autosnap
 timeshift-systemd-timer
 toilet
-topgrade-bin
+topgrade
 traceroute
 tree
 tree-sitter-bash
