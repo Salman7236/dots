@@ -143,3 +143,13 @@ snap() {
 mi() {
   mediainfo "$@" | kitten clipboard
 }
+
+salah() {
+  curl -4 -sL "https://api.aladhan.com/v1/timings?latitude=25.0576896&longitude=67.3251328&method=1" |
+    jq -r '
+  .data.timings
+  | to_entries[]
+  | select(.key != "Imsak" and .key != "Firstthird" and .key != "Sunset")
+  | "\u001b[1;36m\(.key)\u001b[0m: \(.value)"
+'
+}
