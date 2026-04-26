@@ -63,6 +63,7 @@ filelight
 fnm
 fprintd
 frameworkintegration
+fuzzel
 gdu
 ghostmirror
 git
@@ -262,7 +263,6 @@ wget
 which
 wireplumber
 wl-clip-persist
-wofi
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xf86-input-evdev
