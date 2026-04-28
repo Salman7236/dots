@@ -150,6 +150,7 @@ salah() {
   .data.timings
   | to_entries[]
   | select(.key != "Imsak" and .key != "Firstthird" and .key != "Sunset")
-  | "\u001b[1;36m\(.key)\u001b[0m: \(.value)"
+  | "\u001b[38;2;255;200;80m\(.key)\u001b[0m: \(.value)"
 '
+
 }
