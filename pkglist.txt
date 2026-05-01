@@ -15,6 +15,7 @@ base-devel
 bash-completion
 bat
 bind
+bluetui
 bluez
 bluez-utils
 breeze-gtk
@@ -29,6 +30,7 @@ cachyos-mirrorlist
 cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 chafa
+cheese
 clamav
 cli11
 cliphist
@@ -64,6 +66,7 @@ fnm
 fprintd
 frameworkintegration
 fuzzel
+fwupd
 gdu
 ghostmirror
 git
@@ -214,6 +217,7 @@ sshfs
 stress-ng
 swtpm
 tailscale
+tealdeer
 terminus-font
 texinfo
 thermald
