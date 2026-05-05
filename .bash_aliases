@@ -27,7 +27,7 @@ alias pkglist='dots add pkglist.txt && dots commit -m "pkglist" && dots push' # 
 
 ### others ###
 # alias grep='grep --color=auto'
-alias sv='sudoedit'
+alias se='sudoedit'
 alias fr='sudo $(history -p !!)'
 alias :q="echo 'You ain'\''t editing a file, nigga.'"
 #alias :wq=':q'
