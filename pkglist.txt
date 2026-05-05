@@ -27,6 +27,7 @@ btrfs-desktop-notification
 btrfs-progs
 cachyos-keyring
 cachyos-mirrorlist
+cachyos-rate-mirrors
 cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 chafa
@@ -34,6 +35,7 @@ cheese
 clamav
 cli11
 cliphist
+cloudflare-speed-cli
 cloudflare-warp-bin
 cowsay
 cpio
@@ -168,6 +170,7 @@ otf-commit-mono-nerd
 otf-font-awesome
 otf-libertinus
 pacman-contrib
+pandoc-cli
 parsync-bin
 pipewire
 pipewire-alsa
@@ -193,6 +196,7 @@ qt6-multimedia-ffmpeg
 qt6-virtualkeyboard
 qt6-wayland
 qt6ct-kde
+rate-mirrors
 rebuild-detector
 reflector-rs-bin
 resvg
@@ -275,7 +279,6 @@ xorg-xhost
 yay
 yazi
 yt-dlp-ejs
-zathura
 zen-browser-bin
 zoxide
 zram-generator
