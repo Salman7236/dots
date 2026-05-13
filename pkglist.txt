@@ -91,6 +91,7 @@ gum
 gvfs
 gvfs-mtp
 gvfs-smb
+helium-browser-bin
 hypremoji
 hypridle
 hyprland
@@ -188,6 +189,7 @@ pv
 pwvucontrol
 python-mutagen
 python-pip
+python-pynvim
 python-pywal16
 python-pywalfox
 qemu-full
