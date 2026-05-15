@@ -9,12 +9,13 @@ alias yeet='yay -Rns'
 ### configs ###
 alias aliases='nvim ~/.bash_aliases'
 alias rc='nvim ~/.bashrc'
-alias hc='nvim ~/.config/hypr/hyprland.conf'
+alias hc='nvim ~/.config/hypr/hyprland.lua'
 alias kc='nvim ~/.config/kitty/kitty.conf'
 alias ilua='nvim ~/.config/nvim/init.lua'
 alias wilua='v /Windows/Users/muham/AppData/Local/nvim/init.lua'
 alias dc='nvim ~/.config/docker/docker-compose.yml'
 alias mpvconf='v ~/.config/mpv/mpv.conf'
+# alias sv='NVIM_APPNAME=simple-nvim nvim'
 
 # dotfiles git workflow #
 alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
