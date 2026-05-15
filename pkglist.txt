@@ -96,7 +96,6 @@ hypremoji
 hypridle
 hyprland
 hyprlock
-hyprpaper
 hyprpicker
 hyprpolkitagent
 imv
