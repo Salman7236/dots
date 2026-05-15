@@ -41,6 +41,7 @@ cowsay
 cpio
 ctop
 darkly-bin
+deno
 dkms
 dma
 dnsmasq
@@ -283,7 +284,6 @@ xf86-input-synaptics
 xorg-xhost
 yay
 yazi
-yt-dlp-ejs
 zen-browser-bin
 zoxide
 zram-generator
