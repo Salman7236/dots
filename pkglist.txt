@@ -23,7 +23,6 @@ brightnessctl
 btop
 btrbk
 btrfs-assistant
-btrfs-desktop-notification
 btrfs-progs
 cachyos-keyring
 cachyos-mirrorlist
