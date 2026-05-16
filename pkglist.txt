@@ -125,11 +125,9 @@ libreoffice-fresh
 libtorrent
 libva-utils
 libvirt
-linux
 linux-cachyos
 linux-cachyos-headers
 linux-firmware
-linux-headers
 localsend-bin
 lolcat
 lsb-release
