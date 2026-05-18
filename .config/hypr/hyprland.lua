@@ -242,7 +242,7 @@ hl.config({
             middle_button_emulation = false,
             tap_to_click         = true,
             drag_lock            = true,
-            tap_and_drag         = false,
+            tap_and_drag         = true,
         },
     },
 })
@@ -336,6 +336,27 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- Clipboard
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
+
+-- Area
+hl.bind("Print",
+    hl.dsp.exec_cmd(
+        "grimblast -f -n copysave area /home/salman/Pictures/Screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png -t png"
+    )
+)
+
+-- Full screen
+hl.bind("SHIFT + Print",
+    hl.dsp.exec_cmd(
+        "grimblast -f -n -c copysave screen /home/salman/Pictures/Screenshots/screenshot_$(date +%Y%m%H%M%S).png -t png"
+    )
+)
+
+-- Active window
+hl.bind("CTRL + Print",
+    hl.dsp.exec_cmd(
+        "grimblast -f -n -c copysave active /home/salman/Pictures/Screenshots/screenshot_$(date +%Y%m%H%M%S).png -t png"
+    )
+)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
