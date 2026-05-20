@@ -184,6 +184,7 @@ plymouth-theme-neat
 progress
 pv
 pwvucontrol
+python-black
 python-mutagen
 python-pip
 python-pynvim
