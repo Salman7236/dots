@@ -1,12 +1,15 @@
+vim.g.netrw_banner = 0
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.g.have_nerd_font = true
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.termguicolors = true
-vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
+vim.schedule(function()
+	vim.o.clipboard = "unnamedplus"
+end)
 vim.opt.scrolloff = 10
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -28,14 +31,13 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = {
-  tab = "» ",
-  trail = "·",
-  nbsp = "␣",
+	tab = "» ",
+	trail = "·",
+	nbsp = "␣",
 }
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.confirm = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- vim.opt.pumheight = 10
 -- vim.opt.pumblend = 10
 -- vim.opt.winblend = 0
@@ -55,3 +57,6 @@ vim.opt.wildmode = "longest:full,full"
 vim.opt.diffopt:append("linematch:60")
 -- vim.opt.redrawtime = 10000
 -- vim.opt.maxmempattern = 20000
+vim.opt.foldmethod = "expr" -- use expression for folding
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- use treesitter for folding
+vim.opt.foldlevel = 99 -- start with all folds open
