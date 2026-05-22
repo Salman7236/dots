@@ -181,10 +181,12 @@ pkgfile
 plasma-integration
 plymouth
 plymouth-theme-neat
+prettier
 progress
 pv
 pwvucontrol
 python-black
+python-isort
 python-mutagen
 python-pip
 python-pynvim
@@ -205,11 +207,13 @@ reflector-rs-bin
 resvg
 ripgrep
 rose-pine-hyprcursor
+ruff
 s-nail
 s-tui
 sddm
 sex
 shellcheck
+shfmt
 shiny-mirrors
 simple-mtpfs
 sl
@@ -222,6 +226,7 @@ spotify-launcher
 ssh-audit
 sshfs
 stress-ng
+stylua
 swtpm
 tailscale
 tealdeer
