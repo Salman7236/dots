@@ -222,7 +222,6 @@ slurp
 smartmontools
 sof-firmware
 speedtest++
-spek-rs-bin
 spotify-launcher
 ssh-audit
 sshfs
