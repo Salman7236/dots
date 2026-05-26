@@ -189,6 +189,7 @@ python-black
 python-isort
 python-mutagen
 python-pip
+python-pipx
 python-pynvim
 python-pywal16
 python-pywalfox
