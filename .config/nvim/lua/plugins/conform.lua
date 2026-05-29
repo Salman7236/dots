@@ -15,6 +15,10 @@ require("conform").setup({
 			typescript = true,
 			javascriptreact = true,
 			typescriptreact = true,
+			html = true,
+			css = true,
+			htmldjango = true,
+			sh = true,
 		}
 		if enabled_filetypes[vim.bo[bufnr].filetype] then
 			return { timeout_ms = 1000 }
@@ -31,6 +35,18 @@ require("conform").setup({
 		rust = { "rustfmt" },
 		-- Conform can also run multiple formatters sequentially
 		python = { "ruff_fix", "ruff_format" },
+		c = { "clang-format" },
+		sh = { "shfmt" },
+		bash = { "shfmt" },
+		javascript = { "prettierd", "prettier", stop_after_first = true },
+		typescript = { "prettierd", "prettier", stop_after_first = true },
+		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+		json = { "prettierd", "prettier", stop_after_first = true },
+		html = { "prettierd", "prettier", stop_after_first = true },
+		css = { "prettierd", "prettier", stop_after_first = true },
+		htmldjango = { "djlint" }, -- Django templates
+		jinja = { "djlint" }, -- Jinja templates
 	},
 	formatters = {
 		ruff_fix = {
@@ -41,16 +57,6 @@ require("conform").setup({
 			command = "ruff",
 			args = { "format", "--stdin-filename", "$FILENAME", "-" },
 		},
-		--
-		-- You can use 'stop_after_first' to run the first available formatter from the list
-		c = { "clang-format" },
-		sh = { "shfmt" },
-		javascript = { "prettierd", "prettier", stop_after_first = true },
-		typescript = { "prettierd", "prettier", stop_after_first = true },
-		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
-		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
-		json = { "prettierd", "prettier", stop_after_first = true },
-		html = { "prettierd", "prettier", stop_after_first = true },
 	},
 })
 
