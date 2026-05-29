@@ -14,9 +14,9 @@ vim.diagnostic.config({
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,
-			[vim.diagnostic.severity.WARN] = diagnostic_signs.WARN,
-			[vim.diagnostic.severity.INFO] = diagnostic_signs.INFO,
-			[vim.diagnostic.severity.HINT] = diagnostic_signs.HINT,
+			[vim.diagnostic.severity.WARN] = diagnostic_signs.Warn,
+			[vim.diagnostic.severity.INFO] = diagnostic_signs.Info,
+			[vim.diagnostic.severity.HINT] = diagnostic_signs.Hint,
 		},
 	},
 	float = { border = "rounded", source = true },
@@ -119,10 +119,25 @@ local servers = {
 	-- ts_ls = {},
 
 	stylua = {}, -- Used to format Lua code
+	bashls = {},
 	ruff = {},
+	djlsp = {
+		cmd = { "djlsp" },
+	},
 	pyrefly = {
+		filetypes = { "python" },
+		root_markers = {
+			"pyrefly.toml",
+			"pyproject.toml",
+			"setup.py",
+			"setup.cfg",
+			"requirements.txt",
+			"Pipfile",
+			".git",
+		},
 		settings = {
 			pyrefly = {
+				--
 				-- Most settings are automatic, but you can add specific ones here
 				-- if you need to override default behavior
 			},
