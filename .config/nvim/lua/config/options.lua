@@ -1,4 +1,6 @@
 vim.g.netrw_banner = 0
+vim.o.swapfile = false
+vim.o.exrc = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.g.have_nerd_font = true
@@ -11,6 +13,7 @@ vim.schedule(function()
 	vim.o.clipboard = "unnamedplus"
 end)
 vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 10
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
