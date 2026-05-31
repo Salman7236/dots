@@ -21,7 +21,7 @@ alias mpvconf='v ~/.config/mpv/mpv.conf'
 alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
 # alias nun='dots commit -m "nun too much"'
 nun() {
-  dots commit -m "nun too much" && dots push
+	dots commit -m "nun too much" && dots push
 }
 alias pkglist='dots add pkglist.txt && dots commit -m "pkglist" && dots push' # alias to add, commit and push pkglist.txt
 ###############
@@ -43,15 +43,15 @@ alias ff="fastfetch"
 alias v520='ssh salman@v520'
 
 s() {
-  kitty @ set-colors --all "/home/salman/.config/kitty/Tomorrow Night Bright.conf"
-  kitten ssh salman@v520
-  kitty @ set-colors --all /home/salman/.config/kitty/current-theme.conf
+	kitty @ set-colors --all "/home/salman/.config/kitty/Tomorrow Night Bright.conf"
+	kitten ssh salman@v520
+	kitty @ set-colors --all /home/salman/.config/kitty/current-theme.conf
 }
 
 ks() {
-  kitty @ set-colors --all "/home/salman/.config/kitty/Tomorrow Night Bright.conf"
-  kitten ssh salman@100.111.9.74
-  kitty @ set-colors --all /home/salman/.config/kitty/current-theme.conf
+	kitty @ set-colors --all "/home/salman/.config/kitty/Tomorrow Night Bright.conf"
+	kitten ssh salman@100.111.9.74
+	kitty @ set-colors --all /home/salman/.config/kitty/current-theme.conf
 }
 
 alias shh='systemctl sleep'
@@ -85,6 +85,7 @@ alias dl='sudo docker compose -f ~/.config/docker/docker-compose.yml logs'
 alias ctop='sudo ctop'
 alias lazydocker='sudo lazydocker'
 alias dexec='sudo docker compose -f ~/.config/docker/docker-compose.yml exec'
+alias recyclarr-sync='sudo docker compose -f ~/.config/docker/docker-compose.yml exec recyclarr recyclarr sync'
 alias sysinfo='sudo sysinfo'
 ###################
 
@@ -115,39 +116,39 @@ alias l.="eza -a | grep -E '^\.'"
 
 ### Functions ###
 
-# v = nvim
-v() {
-  nvim "$@"
+h() {
+	history | rg -i "$@"
 }
 
-h() {
-  history | rg -i "$@"
+# v = nvim
+v() {
+	nvim "$@"
 }
 
 sudo() {
-  if [ "$1" = "v" ]; then
-    shift
-    command sudo nvim "$@"
-  else
-    command sudo "$@"
-  fi
+	if [ "$1" = "v" ]; then
+		shift
+		command sudo nvim "$@"
+	else
+		command sudo "$@"
+	fi
 }
 
 # timeshift
 snap() {
-  local comment="$*"
-  local today
-  today=$(date +%F)
-  sudo timeshift --create --comments "${today}${comment:+_${comment}}"
+	local comment="$*"
+	local today
+	today=$(date +%F)
+	sudo timeshift --create --comments "${today}${comment:+_${comment}}"
 }
 
 mi() {
-  mediainfo "$@" | kitten clipboard
+	mediainfo "$@" | kitten clipboard
 }
 
 salah() {
-  curl -4 -sL "https://api.aladhan.com/v1/timings?latitude=25.0576896&longitude=67.3251328&method=1" |
-    jq -r '
+	curl -4 -sL "https://api.aladhan.com/v1/timings?latitude=25.0576896&longitude=67.3251328&method=1" |
+		jq -r '
   .data.timings
   | to_entries[]
   | select(.key != "Imsak" and .key != "Firstthird" and .key != "Sunset")
