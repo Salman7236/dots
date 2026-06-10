@@ -1,6 +1,7 @@
 vim.loader.enable()
 require("vim._core.ui2").enable({})
 require("config.options")
+require("config.filetypes")
 require("config.keybinds")
 require("config.diagnostics")
 require("plugins.tokyonight")
