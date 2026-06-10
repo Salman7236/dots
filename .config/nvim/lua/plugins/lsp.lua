@@ -1,3 +1,11 @@
+vim.pack.add({
+	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/mason-org/mason.nvim",
+	"https://github.com/mason-org/mason-lspconfig.nvim",
+	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
+	"https://github.com/b0o/schemastore.nvim",
+})
+
 --  This function gets run when an LSP attaches to a particular buffer.
 --    That is to say, every time a new file is opened that is associated with
 --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
@@ -121,6 +129,18 @@ local servers = {
 	stylua = {}, -- Used to format Lua code
 	bashls = {},
 	ruff = {},
+	jsonls = {
+		on_init = function(client)
+			-- Keeps prettierd as the boss of formatting
+			client.server_capabilities.documentFormattingProvider = false
+		end,
+		settings = {
+			json = {
+				schemas = pcall(require, "schemastore") and require("schemastore").json.schemas() or {},
+				validate = { enable = true },
+			},
+		},
+	},
 	djlsp = {
 		cmd = { "djlsp" },
 	},
