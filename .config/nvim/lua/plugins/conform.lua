@@ -18,6 +18,7 @@ require("conform").setup({
 			html = true,
 			css = true,
 			htmldjango = true,
+			jinja = true,
 			sh = true,
 			json = true,
 			jsonc = true,
@@ -59,6 +60,13 @@ require("conform").setup({
 		ruff_format = {
 			command = "ruff",
 			args = { "format", "--stdin-filename", "$FILENAME", "-" },
+		},
+		djlint = {
+			args = function(_, ctx)
+				local ft = vim.bo[ctx.buf].filetype
+				local profile = ft == "htmldjango" and "django" or "jinja"
+				return { "--reformat", "--profile", profile, "-" }
+			end,
 		},
 	},
 })

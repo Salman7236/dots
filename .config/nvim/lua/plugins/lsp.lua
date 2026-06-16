@@ -128,7 +128,9 @@ local servers = {
 
 	stylua = {}, -- Used to format Lua code
 	bashls = {},
-	ruff = {},
+	ruff = {
+		filetypes = { "python" }, -- Explicitly guard it
+	},
 	jsonls = {
 		on_init = function(client)
 			-- Keeps prettierd as the boss of formatting
@@ -141,8 +143,24 @@ local servers = {
 			},
 		},
 	},
+	-- html = {
+	-- 	filetypes = { "html", "jinja", "htmldjango" },
+	-- 	init_options = {
+	-- 		provideFormatter = false,
+	-- 		embeddedLanguages = { css = true, javascript = true },
+	-- 		configurationSection = { "html", "css", "javascript" },
+	-- 	},
+	-- },
 	djlsp = {
 		cmd = { "djlsp" },
+		filetypes = { "htmldjango" },
+		root_dir = function(bufnr, cb)
+			local fname = vim.api.nvim_buf_get_name(bufnr)
+			local root = vim.fs.root(fname, { "manage.py" })
+			if root then
+				cb(root)
+			end
+		end,
 	},
 	pyrefly = {
 		filetypes = { "python" },
