@@ -262,6 +262,7 @@ ttyper
 unarchiver
 unrar
 usbutils
+uv
 uwsm
 ventoy-bin
 virt-install
