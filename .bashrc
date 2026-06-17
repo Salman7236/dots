@@ -16,19 +16,19 @@
 
 # Parse git branch
 parse_git_branch() {
-  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+	git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 PS1='\[\e[36m\]\u\[\e[0m\]@\[\e[35m\]\h\[\e[0m\] \[\e[33m\]\w\[\e[0m\] \[\e[32m\]$(parse_git_branch)\[\e[0m\]\$ '
 
 if [ -f "$HOME/.bash_aliases" ]; then
-  . "$HOME/.bash_aliases"
+	. "$HOME/.bash_aliases"
 fi
 
 ############################
 
 if [ -f /usr/bin/fastfetch ]; then
-  fastfetch
+	fastfetch
 fi
 
 # Expand the history size
@@ -61,12 +61,12 @@ eval "$(fzf --bash)"
 
 # yazi change cwd when exiting
 function y() {
-  local tmp cwd
-  tmp="$(mktemp -t "yazi-cwd.XXXXXX")" || return
-  yazi "$@" --cwd-file="$tmp"
-  IFS= read -r -d '' cwd <"$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd" || return
-  rm -f -- "$tmp"
+	local tmp cwd
+	tmp="$(mktemp -t "yazi-cwd.XXXXXX")" || return
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd <"$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd" || return
+	rm -f -- "$tmp"
 }
 
 #path for bin
