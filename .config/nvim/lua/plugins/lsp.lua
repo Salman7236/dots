@@ -129,12 +129,17 @@ local servers = {
 	stylua = {}, -- Used to format Lua code
 	bashls = {},
 	ruff = {
-		filetypes = { "python" }, -- Explicitly guard it
+		filetypes = { "python" },
+		init_options = {
+			settings = {
+				lint = { enable = false }, -- disable linting, pyrefly handles this
+			},
+		},
 	},
 	jsonls = {
 		on_init = function(client)
-			-- Keeps prettierd as the boss of formatting
-			client.server_capabilities.documentFormattingProvider = false
+			-- keeps prettierd as the boss of formatting
+			client.server_capabilities.documentformattingprovider = false
 		end,
 		settings = {
 			json = {
@@ -146,9 +151,9 @@ local servers = {
 	-- html = {
 	-- 	filetypes = { "html", "jinja", "htmldjango" },
 	-- 	init_options = {
-	-- 		provideFormatter = false,
-	-- 		embeddedLanguages = { css = true, javascript = true },
-	-- 		configurationSection = { "html", "css", "javascript" },
+	-- 		provideformatter = false,
+	-- 		embeddedlanguages = { css = true, javascript = true },
+	-- 		configurationsection = { "html", "css", "javascript" },
 	-- 	},
 	-- },
 	djlsp = {
@@ -170,21 +175,21 @@ local servers = {
 			"setup.py",
 			"setup.cfg",
 			"requirements.txt",
-			"Pipfile",
+			"pipfile",
 			".git",
 		},
 		settings = {
 			pyrefly = {
 				--
-				-- Most settings are automatic, but you can add specific ones here
+				-- most settings are automatic, but you can add specific ones here
 				-- if you need to override default behavior
 			},
 		},
 	},
-	-- Special Lua Config, as recommended by neovim help docs
+	-- special lua config, as recommended by neovim help docs
 	lua_ls = {
 		on_init = function(client)
-			client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
+			client.server_capabilities.documentformattingprovider = false -- disable formatting (formatting is done by stylua)
 
 			if client.workspace_folders then
 				local path = client.workspace_folders[1].name

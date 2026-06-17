@@ -20,6 +20,7 @@ local parsers = {
 	"diff",
 	"html",
 	"htmldjango",
+	"jinja",
 	"javascript",
 	"json",
 	"lua",

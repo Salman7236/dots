@@ -1,14 +1,5 @@
--- vim.filetype.add({
--- 	pattern = {
--- 		[".*/templates/.*%.html"] = function(path)
--- 			local dir = vim.fn.fnamemodify(path, ":h")
--- 			while dir ~= "/" do
--- 				if vim.fn.filereadable(dir .. "/manage.py") == 1 then
--- 					return "htmldjango" -- Real Django projects use htmldjango
--- 				end
--- 				dir = vim.fn.fnamemodify(dir, ":h")
--- 			end
--- 			return "jinja" -- FastAPI / Sanic / Flask templates return pure jinja
--- 		end,
--- 	},
--- })
+vim.filetype.add({
+	pattern = {
+		["templates/.*%.html"] = "htmldjango",
+	},
+})
