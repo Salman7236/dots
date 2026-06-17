@@ -261,6 +261,11 @@ hl.device({
 	sensitivity = 0.6,
 })
 
+hl.device({
+	name = "pixart-hp-320m-usb-optical-mouse",
+	sensitivity = -0.4, -- Decreased sensitivity for your mouse
+	accel_profile = "flat",
+})
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
