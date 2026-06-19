@@ -125,7 +125,13 @@ local servers = {
 	--
 	-- But for many setups, the LSP (`ts_ls`) will work just fine
 	-- ts_ls = {},
-
+	vtsls = {
+		on_init = function(client)
+			client.server_capabilities.documentFormattingProvider = false
+			client.server_capabilities.documentRangeFormattingProvider = false
+			client.server_capabilities.documentOnTypeFormattingProvider = nil
+		end,
+	},
 	stylua = {}, -- Used to format Lua code
 	bashls = {},
 	ruff = {
