@@ -164,6 +164,7 @@ nwg-displays
 nwg-look
 nyancat
 onefetch
+onthespot-appimage
 opencode
 openssh
 os-prober
