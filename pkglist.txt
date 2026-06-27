@@ -92,7 +92,6 @@ gvfs
 gvfs-mtp
 gvfs-smb
 helium-browser-bin
-hypremoji
 hypridle
 hyprland
 hyprlock
