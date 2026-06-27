@@ -266,6 +266,12 @@ hl.device({
 	sensitivity = -0.4, -- Decreased sensitivity for your mouse
 	accel_profile = "flat",
 })
+
+hl.device({
+	name = "2.4g-mouse-1",
+	sensitivity = -0.5,
+	accel_profile = "flat",
+})
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
