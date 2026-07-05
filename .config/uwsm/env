@@ -12,3 +12,4 @@ export LIBVA_DRIVER_NAME=iHD
 export VDPAU_DRIVER=va_gl
 export ANV_DEBUG=video-decode,video-encode
 #export QT_STYLE_OVERRIDE=kvantum
+export XDG_MENU_PREFIX=arch-
