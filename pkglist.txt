@@ -122,6 +122,7 @@ libinput-tools
 libpulse
 libreoffice-fresh
 libtorrent
+libultrahdr
 libva-utils
 libvirt
 linux-cachyos
@@ -141,6 +142,7 @@ matugen
 mediainfo
 mediainfo-gui
 mesa-utils
+motrix-next-bin
 mpv
 mtr
 ncdu
