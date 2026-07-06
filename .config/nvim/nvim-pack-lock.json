@@ -57,7 +57,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "schemastore.nvim": {
-      "rev": "6ff1f21b2e2b77ec59f7433ce2d9fbc052d908ac",
+      "rev": "4504f8f389c44561e10027e68000cbe000129727",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "snacks.nvim": {
