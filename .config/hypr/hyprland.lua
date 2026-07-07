@@ -285,6 +285,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("app2unit -- " .. browser))
 hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("app2unit -- " .. browserIncognito))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("app2unit -- " .. fileManager))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("app2unit -- " .. menu))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("app2unit -- bemoji -t")) -- Bemoji
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm stop"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
