@@ -23,7 +23,8 @@ alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
 nun() {
 	dots commit -m "nun too much" && dots push
 }
-alias pkglist='dots add pkglist.txt && dots commit -m "pkglist" && dots push' # alias to add, commit and push pkglist.txt
+alias pkglist='dots add ~/pkglist.txt && dots commit -m "pkglist"'
+alias pluginlockfilesyncnvim='dots add ~/.config/nvim && dots commit -m "NeoVim: Sync plugin lockfile"'
 ###############
 
 ### others ###
