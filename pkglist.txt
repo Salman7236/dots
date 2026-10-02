@@ -257,6 +257,7 @@ ttf-droid
 ttf-fira-mono
 ttf-fira-sans
 ttf-firacode-nerd
+ttf-googlesanscode-nerd
 ttf-inconsolata
 ttf-jetbrains-mono-nerd
 ttf-liberation
