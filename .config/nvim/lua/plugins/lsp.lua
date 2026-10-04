@@ -115,7 +115,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 --  See `:help lsp-config` for information about keys and how to configure
 ---@type table<string, vim.lsp.Config>
 local servers = {
-	-- clangd = {},
+	clangd = {
+		cmd = { "clangd", "--background-index", "--clang-tidy", "--header-insertion=never" },
+	},
 	-- gopls = {},
 	-- pyright = {},
 	-- rust_analyzer = {},
@@ -145,7 +147,7 @@ local servers = {
 	jsonls = {
 		on_init = function(client)
 			-- keeps prettierd as the boss of formatting
-			client.server_capabilities.documentformattingprovider = false
+			client.server_capabilities.documentFormattingProvider = false
 		end,
 		settings = {
 			json = {
@@ -195,7 +197,7 @@ local servers = {
 	-- special lua config, as recommended by neovim help docs
 	lua_ls = {
 		on_init = function(client)
-			client.server_capabilities.documentformattingprovider = false -- disable formatting (formatting is done by stylua)
+			client.server_capabilities.documentFormattingProvider = false -- disable formatting (formatting is done by stylua)
 
 			if client.workspace_folders then
 				local path = client.workspace_folders[1].name
