@@ -11,7 +11,7 @@ alias aliases='nvim ~/.bash_aliases'
 alias rc='nvim ~/.bashrc'
 alias hc='nvim ~/.config/hypr/hyprland.lua'
 alias kc='nvim ~/.config/kitty/kitty.conf'
-alias nc='nvim ~/.config/nvim/'
+alias nvc='nvim ~/.config/nvim/'
 alias wilua='v /Windows/Users/muham/AppData/Local/nvim/init.lua'
 alias dc='nvim ~/.config/docker/docker-compose.yml'
 alias mpvconf='v ~/.config/mpv/mpv.conf'
@@ -103,17 +103,16 @@ alias .....='cd ../../../..'
 # alias -='cd -' # return to last dir
 
 # eza ls aliases
-
-alias ls='eza --color=always --group-directories-first --icons'
-alias ll='eza -la --icons --octal-permissions --group-directories-first'
-alias l='eza -blGF --header --git --color=always --group-directories-first --icons'
-alias llm='eza -lbGd --header --git --sort=modified --color=always --group-directories-first --icons'
-alias la='eza --long --all --group --group-directories-first'
-alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --color=always --group-directories-first --icons'
-
-alias lS='eza -1 --color=always --group-directories-first --icons'
-alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
-alias l.="eza -a | grep -E '^\.'"
+alias ls='eza --group-directories-first --icons=auto --color=auto'
+# Long views
+alias l='eza -blF --git --header --group-directories-first --icons=auto --color=auto'
+alias ll='eza -la --git --header --octal-permissions --group-directories-first --icons=auto --color=auto'
+alias la='eza -la --git --header --group-directories-first --icons=auto --color=auto'
+alias lm='eza -l --git --header --sort=modified --reverse --group-directories-first --icons=auto --color=auto'
+# Compact and specialist views
+alias l1='eza --oneline --group-directories-first --icons=auto --color=auto'
+alias lt='eza --tree --level=2 --group-directories-first --icons=auto --color=auto'
+alias l.='eza -a --oneline --color=never | grep -E "^\."'
 
 ### Functions ###
 
