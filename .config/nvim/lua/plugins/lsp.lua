@@ -4,6 +4,7 @@ vim.pack.add({
 	"https://github.com/mason-org/mason-lspconfig.nvim",
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 	"https://github.com/b0o/schemastore.nvim",
+	"https://github.com/DrKJeff16/wezterm-types",
 })
 
 --  This function gets run when an LSP attaches to a particular buffer.
