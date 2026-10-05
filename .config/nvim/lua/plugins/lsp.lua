@@ -199,10 +199,10 @@ local servers = {
 			},
 		},
 	},
-	-- special lua config, as recommended by neovim help docs
+	-- Special Lua Config, as recommended by neovim help docs
 	lua_ls = {
 		on_init = function(client)
-			client.server_capabilities.documentFormattingProvider = false -- disable formatting (formatting is done by stylua)
+			client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
 
 			if client.workspace_folders then
 				local path = client.workspace_folders[1].name
@@ -214,7 +214,8 @@ local servers = {
 				end
 			end
 
-			client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
+			local current_settings = client.config.settings --[[@as lspconfig.settings.lua_ls]]
+			client.config.settings.Lua = vim.tbl_deep_extend("force", current_settings.Lua, {
 				runtime = {
 					version = "LuaJIT",
 					path = { "lua/?.lua", "lua/?/init.lua" },
@@ -223,10 +224,7 @@ local servers = {
 					checkThirdParty = false,
 					-- NOTE: this is a lot slower and will cause issues when working on your own configuration.
 					--  See https://github.com/neovim/nvim-lspconfig/issues/3189
-					library = vim.tbl_extend("force", vim.api.nvim_get_runtime_file("", true), {
-						"${3rd}/luv/library",
-						"${3rd}/busted/library",
-					}),
+					library = vim.api.nvim_get_runtime_file("", true),
 				},
 			})
 		end,
