@@ -236,6 +236,18 @@ local servers = {
 			},
 		},
 	},
+	yamlls = {
+		settings = {
+			yaml = {
+				format = { enable = false }, -- conform handles formatting
+				schemaStore = { enable = false, url = "" }, -- schemastore.nvim supplies schemas
+				schemas = require("schemastore").yaml.schemas(),
+				validate = true,
+				keyOrdering = false,
+			},
+		},
+	},
+	docker_language_server = {},
 }
 
 -- Automatically install LSPs and related tools to stdpath for Neovim
@@ -252,6 +264,8 @@ local ensure_installed = vim.tbl_keys(servers or {})
 vim.list_extend(ensure_installed, {
 	-- You can add other tools here that you want Mason to install
 	"clang-format",
+	"yamlfmt",
+	"docker-language-server",
 })
 
 require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

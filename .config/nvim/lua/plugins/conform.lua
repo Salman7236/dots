@@ -23,6 +23,8 @@ require("conform").setup({
 			sh = true,
 			json = true,
 			jsonc = true,
+			yaml = true,
+			["yaml.docker-compose"] = true,
 		}
 		if enabled_filetypes[vim.bo[bufnr].filetype] then
 			return { timeout_ms = 1000 }
@@ -52,6 +54,7 @@ require("conform").setup({
 		css = { "prettierd", "prettier", stop_after_first = true },
 		htmldjango = { "djlint" }, -- Django templates
 		jinja = { "djlint" }, -- Jinja templates
+		yaml = { "yamlfmt" },
 	},
 	formatters = {
 		ruff_fix = {
@@ -68,6 +71,9 @@ require("conform").setup({
 				local profile = ft == "htmldjango" and "django" or "jinja"
 				return { "--reformat", "--profile", profile, "-" }
 			end,
+		},
+		yamlfmt = {
+			prepend_args = { "-formatter", "indent=2,retain_line_breaks_single=true" },
 		},
 	},
 })
