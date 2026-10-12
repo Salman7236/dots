@@ -227,6 +227,7 @@ slurp
 smartmontools
 sof-firmware
 speedtest++
+spotifast-bin
 spotify-launcher
 ssh-audit
 sshfs
