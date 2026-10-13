@@ -25,7 +25,7 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "fzf-lua": {
-      "rev": "d9725e6446b82ed38186686fe9d4f9826a98c269",
+      "rev": "6995a3f8ba256a7a9949747ffbdf5a88eb8a3697",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
@@ -57,7 +57,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "schemastore.nvim": {
-      "rev": "054d18bbb0f3b31ff387f0ea5094cc9a24580e70",
+      "rev": "9ec57eeac6e2e14b7b9b9e74dc8b0ca4954a684b",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "snacks.nvim": {
