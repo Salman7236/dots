@@ -27,7 +27,7 @@ require("conform").setup({
 			["yaml.docker-compose"] = true,
 		}
 		if enabled_filetypes[vim.bo[bufnr].filetype] then
-			return { timeout_ms = 1000 }
+			return { timeout_ms = 5000 }
 		else
 			return nil
 		end
