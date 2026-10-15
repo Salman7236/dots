@@ -73,7 +73,7 @@ require("conform").setup({
 			end,
 		},
 		yamlfmt = {
-			prepend_args = { "-formatter", "indent=2,retain_line_breaks_single=true" },
+			prepend_args = { "-formatter", "indent=2,retain_line_breaks_single=true,drop_merge_tag=true" },
 		},
 	},
 })
