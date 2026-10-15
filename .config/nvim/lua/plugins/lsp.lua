@@ -41,6 +41,36 @@ do
 	end
 end
 
+local lsp_detach_group = vim.api.nvim_create_augroup("kickstart-lsp-detach", {
+	clear = true,
+})
+
+vim.api.nvim_create_autocmd("LspDetach", {
+	group = lsp_detach_group,
+	callback = function(event)
+		vim.lsp.buf.clear_references()
+
+		-- Clear highlights only when no other attached client supports them.
+		local has_highlight_client = false
+		for _, client in ipairs(vim.lsp.get_clients({ bufnr = event.buf })) do
+			if
+				client.id ~= event.data.client_id
+				and client:supports_method("textDocument/documentHighlight", event.buf)
+			then
+				has_highlight_client = true
+				break
+			end
+		end
+
+		if not has_highlight_client then
+			vim.api.nvim_clear_autocmds({
+				group = "kickstart-lsp-highlight",
+				buffer = event.buf,
+			})
+		end
+	end,
+})
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 	callback = function(event)
@@ -92,14 +122,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				group = highlight_augroup,
 				callback = vim.lsp.buf.clear_references,
 			})
-
-			vim.api.nvim_create_autocmd("LspDetach", {
-				group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
-				callback = function(event2)
-					vim.lsp.buf.clear_references()
-					vim.api.nvim_clear_autocmds({ group = "kickstart-lsp-highlight", buffer = event2.buf })
-				end,
-			})
 		end
 
 		-- Toggle inlay hints
@@ -140,7 +162,6 @@ local servers = {
 			client.server_capabilities.documentOnTypeFormattingProvider = nil
 		end,
 	},
-	stylua = {}, -- Used to format Lua code
 	bashls = {},
 	ruff = {
 		filetypes = { "python" },
@@ -266,6 +287,7 @@ vim.list_extend(ensure_installed, {
 	"clang-format",
 	"yamlfmt",
 	"docker-language-server",
+	"stylua",
 })
 
 require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
