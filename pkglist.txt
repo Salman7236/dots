@@ -92,7 +92,6 @@ gum
 gvfs
 gvfs-mtp
 gvfs-smb
-helium-browser-bin
 hunspell-en_us
 hypridle
 hyprland
