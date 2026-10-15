@@ -57,7 +57,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "schemastore.nvim": {
-      "rev": "9a0312f15eb649322cec87109d9971e0ca5ffe4d",
+      "rev": "9485dacfff2828f06c4678b059e382e49ec54aeb",
       "src": "https://github.com/b0o/schemastore.nvim"
     },
     "snacks.nvim": {
@@ -77,7 +77,7 @@
       "src": "https://github.com/tronikelis/ts-autotag.nvim"
     },
     "wezterm-types": {
-      "rev": "18c276bcb503a6a152c714b0d3a15baed787052d",
+      "rev": "39511289aa040a7746a9e2d551b35ef330f15c77",
       "src": "https://github.com/DrKJeff16/wezterm-types"
     },
     "which-key.nvim": {
