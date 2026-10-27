@@ -1,24 +1,34 @@
- -- Diagnostic Config & Keymaps
- --  See `:help vim.diagnostic.Opts`
-vim.diagnostic.config {
-  update_in_insert = false,
-  severity_sort = true,
-  float = { border = 'rounded', source = 'if_many' },
-  underline = { severity = { min = vim.diagnostic.severity.WARN } },
-
-  -- Can switch between these as you prefer
-  virtual_text = true, -- Text shows up at the end of the line
-  virtual_lines = false, -- Text shows up underneath the line, with virtual lines
-
-  -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
-  jump = {
-    on_jump = function(_, bufnr)
-      vim.diagnostic.open_float {
-        bufnr = bufnr,
-        scope = 'cursor',
-        focus = false,
-      }
-    end,
-  },
+-- Diagnostic config and keymaps
+-- See `:help vim.diagnostic.Opts`
+local diagnostic_signs = {
+	Error = " ",
+	Warn = " ",
+	Hint = "",
+	Info = "",
 }
 
+vim.diagnostic.config({
+	update_in_insert = false,
+	severity_sort = true,
+	virtual_text = { prefix = "●", spacing = 4 },
+	virtual_lines = false,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,
+			[vim.diagnostic.severity.WARN] = diagnostic_signs.Warn,
+			[vim.diagnostic.severity.INFO] = diagnostic_signs.Info,
+			[vim.diagnostic.severity.HINT] = diagnostic_signs.Hint,
+		},
+	},
+	float = { border = "rounded", source = true },
+	underline = { severity = { min = vim.diagnostic.severity.WARN } },
+	jump = {
+		on_jump = function(_, bufnr)
+			vim.diagnostic.open_float({
+				bufnr = bufnr,
+				scope = "cursor",
+				focus = false,
+			})
+		end,
+	},
+})
