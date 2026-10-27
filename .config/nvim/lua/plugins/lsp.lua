@@ -118,6 +118,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+local nvim_config_path = vim.fs.normalize(vim.fn.stdpath("config"))
+if vim.fn.has("win32") == 1 then
+	nvim_config_path = nvim_config_path:lower()
+end
+
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 --  See `:help lsp-config` for information about keys and how to configure
@@ -201,39 +206,41 @@ local servers = {
 			},
 		},
 	},
-	-- Special Lua Config, as recommended by neovim help docs
-	lua_ls = {
+	emmylua_ls = {
+		cmd = { "emmylua_ls" },
+		filetypes = { "lua" },
 		on_init = function(client)
-			client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
+			-- Stylua remains the Lua formatter.
+			client.server_capabilities.documentFormattingProvider = false
 
-			if client.workspace_folders then
-				local path = client.workspace_folders[1].name
-				if
-					path ~= vim.fn.stdpath("config")
-					and (vim.uv.fs_stat(path .. "/.luarc.json") or vim.uv.fs_stat(path .. "/.luarc.jsonc"))
-				then
-					return
+			-- Let project-specific Lua config take precedence.
+			local workspace = client.workspace_folders and client.workspace_folders[1]
+			local root = workspace and workspace.name
+			if root and root ~= vim.fn.stdpath("config") then
+				for _, filename in ipairs({ ".emmyrc.json", ".emmyrc.lua", ".luarc.json", ".luarc.jsonc" }) do
+					if vim.uv.fs_stat(vim.fs.joinpath(root, filename)) then
+						client.config.settings = {}
+						break
+					end
 				end
 			end
-
-			local current_settings = client.config.settings --[[@as lspconfig.settings.lua_ls]]
-			client.config.settings.Lua = vim.tbl_deep_extend("force", current_settings.Lua, {
-				runtime = {
-					version = "LuaJIT",
-					path = { "lua/?.lua", "lua/?/init.lua" },
-				},
-				workspace = {
-					checkThirdParty = false,
-					-- NOTE: this is a lot slower and will cause issues when working on your own configuration.
-					--  See https://github.com/neovim/nvim-lspconfig/issues/3189
-					library = vim.api.nvim_get_runtime_file("", true),
-				},
-			})
 		end,
-		---@type lspconfig.settings.lua_ls
 		settings = {
-			Lua = {
-				format = { enable = false }, -- Disable formatting (formatting is done by stylua)
+			emmylua = {
+				runtime = { version = "LuaJIT" },
+				diagnostics = { globals = { "vim" } },
+				workspace = {
+					library = vim.tbl_filter(function(path)
+						path = vim.fs.normalize(path)
+						if vim.fn.has("win32") == 1 then
+							path = path:lower()
+						end
+
+						return path ~= nvim_config_path
+							and not vim.startswith(path, nvim_config_path .. "/")
+							and not vim.startswith(path, nvim_config_path .. "\\")
+					end, vim.api.nvim_get_runtime_file("", true)),
+				},
 			},
 		},
 	},
