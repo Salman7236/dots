@@ -155,6 +155,7 @@ local servers = {
 			less = { validate = true },
 		},
 	},
+	emmet_language_server = {},
 	vtsls = {
 		on_init = function(client)
 			client.server_capabilities.documentFormattingProvider = false
