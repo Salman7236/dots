@@ -140,6 +140,21 @@ local servers = {
 	--
 	-- But for many setups, the LSP (`ts_ls`) will work just fine
 	-- ts_ls = {},
+	html = {
+		init_options = {
+			provideFormatter = false,
+			embeddedLanguages = { css = true, javascript = true },
+			configurationSection = { "html", "css", "javascript" },
+		},
+	},
+	cssls = {
+		init_options = { provideFormatter = false },
+		settings = {
+			css = { validate = true },
+			scss = { validate = true },
+			less = { validate = true },
+		},
+	},
 	vtsls = {
 		on_init = function(client)
 			client.server_capabilities.documentFormattingProvider = false
