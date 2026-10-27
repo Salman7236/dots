@@ -21,6 +21,8 @@ require("conform").setup({
 			htmldjango = true,
 			jinja = true,
 			sh = true,
+			bash = true,
+			rust = true,
 			json = true,
 			jsonc = true,
 			yaml = true,
