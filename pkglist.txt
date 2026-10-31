@@ -31,7 +31,6 @@ cachyos-rate-mirrors
 cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 chafa
-cheese
 clamav
 cli11
 cliphist
