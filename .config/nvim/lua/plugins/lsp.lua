@@ -25,6 +25,10 @@ local lsp_detach_group = vim.api.nvim_create_augroup("kickstart-lsp-detach", {
 	clear = true,
 })
 
+local lsp_highlight_group = vim.api.nvim_create_augroup("kickstart-lsp-highlight", {
+	clear = true,
+})
+
 vim.api.nvim_create_autocmd("LspDetach", {
 	group = lsp_detach_group,
 	callback = function(event)
@@ -44,7 +48,7 @@ vim.api.nvim_create_autocmd("LspDetach", {
 
 		if not has_highlight_client then
 			vim.api.nvim_clear_autocmds({
-				group = "kickstart-lsp-highlight",
+				group = lsp_highlight_group,
 				buffer = event.buf,
 			})
 		end
@@ -90,16 +94,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		-- Highlight references of the word under your cursor
 		local client = vim.lsp.get_client_by_id(event.data.client_id)
 		if client and client:supports_method("textDocument/documentHighlight", event.buf) then
-			local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
 			vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 				buffer = event.buf,
-				group = highlight_augroup,
+				group = lsp_highlight_group,
 				callback = vim.lsp.buf.document_highlight,
 			})
 
 			vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
 				buffer = event.buf,
-				group = highlight_augroup,
+				group = lsp_highlight_group,
 				callback = vim.lsp.buf.clear_references,
 			})
 		end
