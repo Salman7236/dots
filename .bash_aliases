@@ -77,17 +77,14 @@ alias media='yazi /mnt/sshfs/pool/'
 ##############
 
 ### Docker ###
-alias docker-pull='sudo docker compose -f ~/.config/docker/docker-compose.yml pull'
-alias docker-up='sudo docker compose -f ~/.config/docker/docker-compose.yml up -d'
-alias docker-down='sudo docker compose -f ~/.config/docker/docker-compose.yml down'
-alias docker-restart='sudo docker compose -f ~/.config/docker/docker-compose.yml restart'
-alias docker-update='sudo docker compose -f ~/.config/docker/docker-compose.yml pull && sudo docker compose -f ~/.config/docker/docker-compose.yml up -d'
-alias dl='sudo docker compose -f ~/.config/docker/docker-compose.yml logs'
-alias ctop='sudo ctop'
-alias lazydocker='sudo lazydocker'
-alias dexec='sudo docker compose -f ~/.config/docker/docker-compose.yml exec'
-alias recyclarr-sync='sudo docker compose -f ~/.config/docker/docker-compose.yml exec recyclarr recyclarr sync'
-alias sysinfo='sudo sysinfo'
+alias docker-pull='docker compose -f ~/.config/docker/docker-compose.yml pull'
+alias docker-up='docker compose -f ~/.config/docker/docker-compose.yml up -d'
+alias docker-down='docker compose -f ~/.config/docker/docker-compose.yml down'
+alias docker-restart='docker compose -f ~/.config/docker/docker-compose.yml restart'
+alias docker-update='docker compose -f ~/.config/docker/docker-compose.yml pull && docker compose -f ~/.config/docker/docker-compose.yml up -d'
+alias dl='docker compose -f ~/.config/docker/docker-compose.yml logs'
+alias dexec='docker compose -f ~/.config/docker/docker-compose.yml exec'
+alias recyclarr-sync='docker compose -f ~/.config/docker/docker-compose.yml exec recyclarr recyclarr sync'
 ###################
 
 ### Directories ###
