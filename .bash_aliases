@@ -24,7 +24,6 @@ nun() {
 	dots commit -m "nun too much" && dots push
 }
 alias pkglist='dots add ~/pkglist.txt && dots commit -m "pkglist"'
-alias pluginlockfilesyncnvim='dots add ~/.config/nvim && dots commit -m "NeoVim: Sync plugin lockfile"'
 ###############
 
 ### others ###
