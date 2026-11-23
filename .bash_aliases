@@ -23,7 +23,7 @@ alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
 nun() {
 	dots commit -m "nun too much" && dots push
 }
-alias pkglist='dots add ~/pkglist.txt && dots commit -m "pkglist"'
+alias pkglist='dots add pkglist.txt && dots commit -m "chore(packages): sync list of installed packages"'
 ###############
 
 ### others ###
@@ -99,12 +99,13 @@ alias .....='cd ../../../..'
 # alias -='cd -' # return to last dir
 
 # eza ls aliases
-alias ls='eza --group-directories-first --icons=auto --color=auto'
+
 # Long views
 alias l='eza -blF --git --header --group-directories-first --icons=auto --color=auto'
 alias ll='eza -la --git --header --octal-permissions --group-directories-first --icons=auto --color=auto'
 alias la='eza -la --git --header --group-directories-first --icons=auto --color=auto'
 alias lm='eza -l --git --header --sort=modified --reverse --group-directories-first --icons=auto --color=auto'
+
 # Compact and specialist views
 alias l1='eza --oneline --group-directories-first --icons=auto --color=auto'
 alias lt='eza --tree --level=2 --group-directories-first --icons=auto --color=auto'
